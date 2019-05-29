@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "start-jenkins": "nuxt start --hostname 0.0.0.0 --port 80 </dev/null &>/dev/null &",
-    "stop-jenkins": "kill $(sudo lsof -t -i:80)",
+    "stop-jenkins": "kill $(sudo lsof -t -i:80) || exit 0",
     "generate": "nuxt generate"
   },
   "dependencies": {
